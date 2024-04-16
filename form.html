@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="style/form.css">
+    <link rel="stylesheet" href="style/loader.css">
+</head>
+<body>
+
+  <div class="loader-container" id="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div id="content" style="visibility: hidden;">
+  <!-- Navigation bar content started -->
+    <nav>
+        <div class="navbar">
+          <i class='bx bx-menu'></i>
+          <div class="logo"><a href="index.html"><img src="images/ramnamarotilogo-removebg-preview.png" class="logo" height="70px" width="80px"></a></div>
+          <div class="logo"><a href="#">RamnaMaroti</a></div>
+          <div class="nav-links">
+            <div class="sidebar-logo">
+              <span class="logo-name">RamnaMaroti</span>
+              <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+              <li><a href="index.html">HOME</a></li>
+              <li>
+                <a href="#">About Us</a>
+                <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
+                <ul class="htmlCss-sub-menu sub-menu">
+                  <li><a href="about.html">About Hanumanji</a></li>
+    
+                  <li><a href="about2.html">About Mandir</a></li>
+                  
+                </ul> 
+               </li> 
+              <li>
+                <a href="#">Sansthan</a>
+                <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="RamnaMarotiTrust.html">Ramna Maroti Mandir Trust</a></li>
+                  <li><a href="RamnaMarotiYuvaFoundation.html">Ramna Maroti Yuva Foundation</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Gallery</a>
+              <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                <ul class="js-sub-menu sub-menu">
+                  <li><a href="gallery.html">Photos</a></li>
+                  <li><a href="video.html">Videos</a></li>
+                </ul>
+            </li>
+            <li><a href="shlok.html">Shlok</a></li>
+            <li><a href="Donation.html">Donation</a></li>
+              <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+          </div>
+          <div class="search-box">
+            <i class='bx bx-search'></i>
+            <div class="input-box">
+              <input type="text" placeholder="Search...">
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- Body Content Started -->
+
+      <section class="main-container">
+        <div class="form-container">
+
+          <header>Ramnamaroti Donation Form</header>
+          <form action="#" class="form">
+            <div class="input-box">
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter full name" required />
+            </div>
+            <div class="input-box">
+              <label>Email Address</label>
+              <input type="text" placeholder="Enter email address" required />
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <label>Phone Number</label>
+                <input type="number" placeholder="Enter phone number" required />
+              </div>
+              <div class="input-box">
+                <label>Donation Amount</label>
+                <input type="text" placeholder="Enter Amount" required />
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <label>Donation Service</label>
+                <div class="select-box">
+                  <select>
+                    <option hidden>Select Donation Service</option>
+                    <option>CANCER</option>
+                    <option>HIV</option>
+                    <option>ORPHAN CHILD</option>
+                    <option>VRUDHASHRAM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="gender-box">
+              <h3>Gender</h3>
+              <div class="gender-option">
+                <div class="gender">
+                  <input type="radio" id="check-male" name="gender" checked />
+                  <label for="check-male">male</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-female" name="gender" />
+                  <label for="check-female">Female</label>
+                </div>
+                <div class="gender">
+                  <input type="radio" id="check-other" name="gender" />
+                  <label for="check-other">prefer not to say</label>
+                </div>
+              </div>
+            </div>
+            <div class="input-box address">
+              <label>Address</label>
+              <input type="text" placeholder="Enter street address" required />
+              <input type="text" placeholder="Enter street address line 2" required />
+              <div class="column">
+                <input type="text" placeholder="Enter your state" required />
+                <input type="text" placeholder="Enter your city" required />
+              </div>
+              <div class="column">
+                <!-- <input type="text" placeholder="Enter your region" required /> -->
+                <input type="text" placeholder="Enter postal code" required />
+              </div>
+            </div>
+            <div class="column">
+              <div class="input-box">
+                <textarea required class="long-text" style="border: 0cap; border-radius: 5px;" placeholder="Enter your message">
+                </textarea>
+              </div>
+            </div>
+            <button class="submit-button" onclick="showQRCode(event)">SUBMIT</button>
+          </form>
+  
+        </div>
+        <img src="images/ramnamarotilogo-removebg-preview.png">
+      </section>
+
+      <div id="qrcode" style="display: none;">
+        <img class="qr-image" src="images/QR.jpg" alt="qrcode">
+        <button class="Btn-1">
+          PAY
+          <svg class="svgIcon-1" viewBox="0 0 576 512"><path d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z"></path></svg>
+        </button>
+      </div>
+        
+
+      <script>
+
+        function showQRCode(event) {
+
+          event.preventDefault();
+          var qrcode = document.getElementById('qrcode');
+          qrcode.style.display = 'block';
+          event.stopPropagation();
+
+        }
+
+        // function to hide the qrcode
+        function hideQRCode() {
+          var qrcode = document.getElementById('qrcode');
+          qrcode.style.display = 'none';
+        }
+
+        document.addEventListener('click', function(event){
+          var qrcode = document.getElementById('qrcode');
+          var submitBtn = document.getElementById('submitBtn');
+
+          // check if the clicked element is not the QR code itself and not the submit button
+          if (event.target !== qrcode && event.target !== submitBtn) {
+            hideQRCode();
+          }
+        })
+    </script>
+
+    <!-- Footer Content -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>About Mandir</h4>
+            <ul>
+              <li><a href="about.html">About Mandir</a></li>
+              <li><a href="about2.html">About Hanumanji</a></li>
+              <li><a href="RamnaMarotiTrust.html">About Mandir Trust</a></li>
+              <li><a href="RamnaMarotiYuvaFoundation.html">About Yuva Foundation</a></li>
+              
+              
+              <li><a href="shlok.html">Shlok</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Post Tag</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <!-- <li><a href="#">About Us</a></li> -->
+              <li><a href="#">Sansthan</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Shlok</a></li>
+              <li><a href="#">Donation</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Recent Post</h4>
+            <ul>
+              
+              <li><a href="gallery.html">Photos</a></li>
+              <li><a href="video.html">Videos</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Useful Links</h4>
+            
+            <ul>
+              <li><a href="Donation.html">Donation</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <br>
+        <hr>
+        <p style="text-align: center; color: white; margin-top: 15px; font-size: 12px;">
+          © 2024 | <a style="text-decoration: none; color: white;" href="http://royalswebtechpvtltd.com/" target="_blank">Designed and Developed by © Royal Webtech Pvt Ltd</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </div>
+
+  <script>
+    function init() {
+      let loading = document.getElementById("loader");
+      let main_div = document.getElementById("content");
+  
+      setTimeout(() => {
+        loading.style.display = "none";
+        main_div.style.visibility = "visible";
+      }, 3000);
+    }
+    init();
+  </script>
+
+</body>
+</html>

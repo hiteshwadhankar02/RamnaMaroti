@@ -1,0 +1,91 @@
+section{
+    margin-top: 100px;
+}
+h1 {
+    background: linear-gradient(90deg,#fae608,#f7531d,#f44f09);
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 3rem;
+    position: relative;
+    margin: 40px 0;
+}
+h1::before {
+    content: ''; 
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: crimson;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0% {
+        width: 100px;
+    }
+    50% {
+        width: 200px;
+    }
+    100% {
+        width: 100px;
+    }
+}
+.RamnaMaroti {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.p1 {
+    /* box-shadow: 0px 0px 40px 0px red; */
+    border-radius: 40% 2% 40% 2%;
+    margin: 40px 0;
+}
+
+.img1{ 
+    height:400px;
+    width:450px;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+.img1:hover{
+    scale: 1.1;
+}
+
+.p2 p{
+color: rgb(71, 42, 3);
+/* margin-left: px; */
+width: 600px;
+font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .p1 img{
+        width: 300px;
+        height: 300px;
+        /* height: 300px; */
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    section{
+        margin-top: 0px;
+    }
+
+    .p2 p{
+        text-align: center;
+        font-size: 16px;
+        width: 350px;
+        margin-bottom: 25px;
+        /* height: 300px; */
+    }
+}

@@ -1,0 +1,77 @@
+.body-content {
+  margin-top: 9%;
+  margin-bottom: 5%;
+  width: 100%;
+  /* height: 175vh; */
+  position: relative;
+  text-align: center; /* Center align content */
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.columns {
+  color: rgb(247, 168, 22);
+  font-weight: bold;
+  margin-top: 15%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around; /* Space columns evenly */
+  flex-wrap: wrap; /* Allow columns to wrap to the next line on smaller screens */
+}
+
+.column {
+  flex: 0 1 25%; 
+  margin-bottom: 20px; 
+}
+
+.shree-ram {
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  /* max-width: 100%; */
+  height: 1000px;
+  width: 1000px;
+  border-radius: 50%;
+  animation: rotate 160s linear infinite;
+  opacity: 0.2;
+  z-index: 0; /* Ensure image is behind text */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .body-content{
+    height: 300vh;
+  }
+
+  .columns {
+    margin-top: 0px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Center align columns vertically */
+  }
+
+  .shree-ram{
+    height: 310px;
+    width: 310px;
+  }
+  
+  .column {
+    flex: 0 1 80%; /* Adjust width of columns on smaller screens */
+  }
+}
