@@ -606,7 +606,7 @@
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 
 .gallery-img {
@@ -700,4 +700,49 @@ a:is(:hover, :focus) figcaption {
 	a:is(:hover, :focus) .gallery-img {
 		transform: scale(1.2);
 	}
+}
+
+/* view more button styling */
+.viewmore {
+  height: 50px;
+  margin: 5px;
+  width: 120px;
+  background: #f4c621;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-family: Consolas, Courier New, monospace;
+  border: solid #f4c621 1px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  border-radius: 5px;
+  background: linear-gradient(145deg, #f3f34c, #f8ab25);
+  /* -webkit-box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b, */
+    inset 5px 5px 10px #212121, inset -5px -5px 10px #212121;
+  /* box-shadow: -1px -5px 15px #41465b, 5px 5px 15px #41465b, */
+    /* inset 5px 5px 10px #212121, inset -5px -5px 10px #212121; */
+}
+
+.viewmore:hover {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #545b78;
+  color: black;
+  font-weight: bold;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.viewmore:active {
+  -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  box-shadow: 1px 1px 13px #20232e, -1px -1px 33px #545b78;
+  color: #d6d6d6;
+  -webkit-transition: 100ms;
+  transition: 100ms;
 }

@@ -37,14 +37,16 @@
 .wrapper {
 	display: flex;
     align-items: center;
-	justify-content: space-evenly;
+	justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
 	width: 100%;
     margin: 5% 0;
 }
 .card {
-    margin-top: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+    margin-top: 20px;
 	width: 280px;
 	height: 360px;
 	background: #fff;
